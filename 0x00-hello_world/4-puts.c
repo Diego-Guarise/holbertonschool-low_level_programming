@@ -1,12 +1,11 @@
 #include <stdio.h>
-/** 
-* main - Descripción breve, una sola línea 
-* @parameterx: Descripción del parámetro x 
-(* una línea en blanco 
-* Descripción: Descripción más larga de la función)? 
-(* encabezado de la sección: descripción de la sección) * 
-* Return: descripción del valor devuelto 
-*/ 
+/**
+*main - display a text
+*
+ *Description: display "Programming is like
+ *building a multilingual puzzle using the puts function.
+ *Return: 0 when finish
+ */ 
 int main(void)	
 {	
 	puts("\"Programming is like building a multilingual puzzle");
