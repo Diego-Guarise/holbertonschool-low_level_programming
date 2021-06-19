@@ -2,7 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-/* main - Positive or Negative - print sign of random number */
+/**
+ * main - print combinations of two digit numbers
+ * Return: 0
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
