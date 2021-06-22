@@ -1,12 +1,9 @@
 #include "holberton.h"
-/* more headers goes there */
 /**
- * main - print_alphabet
- * print_alphabet
- * Description - print_alphabet
- * Return: 0
+ * print_alphabet - prints the alphabet in lowercase
+ *
+ * Return: 0 Is good
  */
-/* betty style doc for function main goes there */
 void print_alphabet(void)
 {
 	char letras;
