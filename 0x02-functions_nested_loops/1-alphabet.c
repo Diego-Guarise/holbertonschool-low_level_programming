@@ -5,7 +5,7 @@
  * Return: 0
  */
 /* betty style doc for function main goes there */
-int main(void)
+void print_alphabet(void)
 {
 	char letras;
 
