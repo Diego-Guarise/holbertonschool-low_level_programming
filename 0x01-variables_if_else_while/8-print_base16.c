@@ -6,19 +6,17 @@
 /* betty style doc for function main goes there */
 #include <stdio.h>
 #include <stdlib.h>
-int main()
-{ 
-    char numeros;
-    char letras;
-
+int main(void)
+{
+	char numeros;
+	char letras;
 	for (numeros = '0'; numeros <= '9'; numeros++)
 	{
-			putchar(numeros);
+		putchar(numeros);
 	}
-	
 	for (letras = 'a'; letras <= 'f'; letras++)
 	{
-			putchar(letras);
+		putchar(letras);
 	}
 	putchar('\n');
 	return (0);
