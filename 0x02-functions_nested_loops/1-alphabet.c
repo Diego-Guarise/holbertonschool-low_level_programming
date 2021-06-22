@@ -1,6 +1,7 @@
 #include "holberton.h"
 /* more headers goes there */
 /**
+ * main - print_alphabet
  * print_alphabet
  * Description - print_alphabet
  * Return: 0
