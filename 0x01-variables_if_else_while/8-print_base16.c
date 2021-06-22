@@ -8,9 +8,12 @@
 int main(void)
 {
 	int numeros;
-
-	for (numeros = '0'; numeros <= '15'; numeros++)
+	char letras;
+	{
+	for (numeros = '0'; numeros <= '9'; numeros++)
 		putchar(numeros);
+	for (letras = 'a'; letras <= 'f'; letras++)
+	}
 	{
 		putchar('\n');
 	}
