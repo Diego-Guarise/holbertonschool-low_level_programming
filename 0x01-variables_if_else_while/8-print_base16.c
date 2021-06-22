@@ -6,8 +6,8 @@
 /* betty style doc for function main goes there */
 #include <stdio.h>
 #include <stdlib.h>
-int main() {
-    
+int main()
+{ 
     char numeros;
     char letras;
 
@@ -20,5 +20,6 @@ int main() {
 	{
 			putchar(letras);
 	}
+	putchar('\n');
 	return (0);
 }
