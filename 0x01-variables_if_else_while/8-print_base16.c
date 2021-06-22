@@ -1,21 +1,22 @@
-#include <stdio.h>
 /* more headers goes there */
 /**
  * main - print alphabet
  * Return: 0
  */
 /* betty style doc for function main goes there */
-int main(void)
-{
-	int numeros;
-	char letras;
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	for (char letras = '0'; letras <= '9'; letras++)
 	{
-	for (numeros = '0'; numeros <= '9'; numeros++)
-		putchar(numeros);
-	for (letras = 'a'; letras <= 'f'; letras++)
+			putchar(letras);
 	}
+	
+	for (char letras = 'a'; letras <= 'f'; letras++)
 	{
-		putchar('\n');
+			putchar(letras);
 	}
 	return (0);
 }
