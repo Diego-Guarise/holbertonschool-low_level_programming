@@ -7,9 +7,9 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	char letras;
+	int letras;
 
-	for (letras = 'z'; letras <= 'a'; letras--)
+	for (letras = 'z'; letras >= 'a'; letras--)
 		putchar(letras);
 	{
 		putchar('\n');
