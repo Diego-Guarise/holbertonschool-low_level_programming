@@ -7,7 +7,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	_putchar('H');
+	putchar('H');
 	_putchar('o');
 	_putchar('l');
 	_putchar('b');
