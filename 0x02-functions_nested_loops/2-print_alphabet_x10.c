@@ -9,9 +9,9 @@ void print_alphabet_x10(void);
 	char letras;
 
 	for (letras = 'a'; letras <= 'z'; letras++)
-		putchar(letras);
+		_putchar(letras);
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 	return (0);
 }
