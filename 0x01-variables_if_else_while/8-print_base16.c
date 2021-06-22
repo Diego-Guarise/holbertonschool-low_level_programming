@@ -6,6 +6,7 @@
 /* betty style doc for function main goes there */
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(void)
 {
 	char numeros;
