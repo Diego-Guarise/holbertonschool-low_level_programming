@@ -1,0 +1,4 @@
+#!/bin/push
+git add --all
+git commit -m '--all,commit,push'
+git push
