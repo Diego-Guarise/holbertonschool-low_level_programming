@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * int _islower(int c)
- *
- *
+ * _islower
+ * c
  */
 int _islower(int c)
 {
