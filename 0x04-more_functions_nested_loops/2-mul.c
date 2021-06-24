@@ -4,8 +4,8 @@
  * mul - Write a function that multiplies two integers.
  * @a: the character
  * @b: the character
- * Return: 0 
- */
+ * Return: 0
+**/
 int mul(int a, int b)
 {
 	int c;
