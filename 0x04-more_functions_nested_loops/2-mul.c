@@ -6,9 +6,7 @@
  * @b: the character
  * Return: 0 
  */
-
 int mul(int a, int b)
-
 {
 	int c;
 
