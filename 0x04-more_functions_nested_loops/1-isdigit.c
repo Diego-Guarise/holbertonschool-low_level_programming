@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _isdigit(int c) - checks for a digit (0 through 9).
+ * _isdigit - checks for a digit (0 through 9).
  * @c: the character to check
  * Return: Returns 1 if c is a digit (0-9), 0 otherwise
  */
