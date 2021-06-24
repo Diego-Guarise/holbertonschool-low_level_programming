@@ -13,6 +13,7 @@ void print_line(int n)
 	}
 	else
 	{
+		for (n = 1; n > 1; n++)
 		{
 			_putchar('_');
 		}
