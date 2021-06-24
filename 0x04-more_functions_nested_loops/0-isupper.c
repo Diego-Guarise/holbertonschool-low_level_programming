@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * _isupper(int c) - checks for uppercase character.
  * @c: the character to check
@@ -7,5 +8,5 @@
 
 int _isupper(int c)
 {
-    return (c >= 'A' && c <= 'Z');
+	return (c >= 'A' && c <= 'Z');
 }
