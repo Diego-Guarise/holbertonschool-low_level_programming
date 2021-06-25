@@ -5,7 +5,7 @@
  * @n: is the number of times the character \ should be printed
 **/
 
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int x, i;
 
@@ -21,5 +21,8 @@ void print_line(int n)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
