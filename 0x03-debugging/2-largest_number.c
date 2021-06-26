@@ -23,7 +23,6 @@ int main(void)
 	{
 		largest = c;
 	}
-	printf("%d is the largest number\n", largest);
 
 	return (0);
 }
