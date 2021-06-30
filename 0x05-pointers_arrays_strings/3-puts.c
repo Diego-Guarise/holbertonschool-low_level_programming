@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <unistd.h>
 
 /**
  * _puts - prints a string to stdout
