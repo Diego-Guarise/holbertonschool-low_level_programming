@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strspn - gets the length of a prefix substring
- * @s: string to evaluate
- * @accept: string 
- * return: the number of bytes in the initial 
+* _strspn - gets the length of a prefix substring
+* @s: string to evaluate
+* @accept: string
+* Return: the number of bytes in the initial
 **/
 
 unsigned int _strspn(char *s, char *accept)
