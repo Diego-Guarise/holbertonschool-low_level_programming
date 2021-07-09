@@ -1,6 +1,6 @@
 git add .
 
-echo 'Colocame el nombre de ese commit aca abajo'
+echo 'Colocame el nombre de ese commit aca abajo:'
 read commitMessage
 
 git commit -m "$commitMessage"
