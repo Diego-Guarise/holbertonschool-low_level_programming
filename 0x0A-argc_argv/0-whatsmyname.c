@@ -2,15 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- * Write a program that prints its name, followed by a new line.
- * If you rename the program, it will print the new name,
- * without having to compile it again
- * You should not remove the path before the name of the program
- * @arcg: argument
- * @argv: argument
- * Return; exit
-**/
+/**
+ * main - print the name of program
+ * Description: if rename the program, it will print the name
+ * without compiling
+ * Return: the name, EXIT_SUCCESS
+ * @argc: argument count
+ * @argv: argument vector
+ */
 
 int main(int argc, char *argv[])
 {
