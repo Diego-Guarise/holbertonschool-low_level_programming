@@ -8,10 +8,10 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	if (unsigned int nmemb)
+	if (nmemb)
 	{
 		_putchar("48")
 	}
-	if (unsigned int size)
+	if (size)
 	return (0);
 }
