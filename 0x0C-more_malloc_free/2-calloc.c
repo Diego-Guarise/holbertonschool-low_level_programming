@@ -9,9 +9,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	if (nmemb)
-	{
-		_putchar("48")
-	}
+	{}
 	if (size)
+	{}
 	return (0);
 }
