@@ -6,11 +6,20 @@
  * @size: size
  * Return: 0
  */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	if (nmemb)
-	{}
-	if (size)
-	{}
-	return (0);
+	unsigned int i;
+	char *p = NULL;
+	void *f;
+
+	if (nmemb && size)
+		p = malloc(nmemb * size);
+	if (p)
+	{
+		for (i = 0; i < (nmemb * size); i++)
+			*(p + i) = 0;
+	}
+	f = p;
+	return (f);
 }
