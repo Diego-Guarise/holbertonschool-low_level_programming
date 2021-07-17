@@ -1,39 +1,47 @@
-#include "holberton.h"
 #include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
+
 /**
- * *string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: limit of s2
- * Return: pointer to new space in memory or null
- **/
+ *string_nconcat - a
+ *@s1 : string
+ *@s2 : string
+ *@n : int
+ *
+ *Return: none
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *strDup;
-	int i;
-	unsigned int j;
+	char *p = NULL;
+	unsigned int len1, len2, i1, i2;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	strDup = malloc(sizeof(char) * (i + n + 1));
-	if (strDup == NULL)
-		return (NULL);
-	i = j = 0;
-	while (s1[i] != '\0')
+	len1 = 0;
+	if (s1)
 	{
-		strDup[i] = s1[i];
-		i++;
+		for (len1 = 0; s1[len1]; len1++)
+			continue;
 	}
-	while (j < n && s2[j] != '\0')
+	len2 = 0;
+	if (s2)
 	{
-		strDup[i] = s2[j];
-		i++, j++;
+		for (len2 = 0; s2[len2]; len2++)
+			continue;
 	}
-	strDup[i] = '\0';
-	return (strDup);
+	if (n < len2)
+		len2 = n;
+	p = malloc(len1 + len2 + 1);
+	if (p)
+	{
+		for (i1 = 0; (i1 < len1) && s1; i1++)
+			p[i1] = s1[i1];
+		for (i2 = 0; (i2 < len2) && s2; i2++)
+			p[i1 + i2] = s2[i2];
+		p[i1 + i2] = 0;
+	}
+	else
+	{
+		free(p);
+		p = NULL;
+	}
+	return (p);
 }
