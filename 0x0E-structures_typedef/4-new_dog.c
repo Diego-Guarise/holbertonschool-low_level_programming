@@ -1,52 +1,74 @@
 #include "dog.h"
+#include <stdio.h>
+#include <stddef.h>
 #include <stdlib.h>
+
 /**
- * new_dog - dog
- * @name: dog
- * @age: dog
- * @owner: dog
- * Return: dog
- **/
+ *str_len - dog
+ *@str: dog
+ *Return: dog
+ */
+int str_len(char *str)
+{
+	if (str)
+	{
+		if (str[0] == 0)
+			return (1);
+		return (str_len(str + 1) + 1);
+	}
+	else
+		return (0);
+}
+/**
+ *str_cpy - dog
+ *@str: dog
+ *Return: dog
+ */
+char *str_cpy(char *str)
+{
+	char *p = NULL;
+	int i;
+
+	p = malloc(str_len(str));
+	if (p && str)
+	{
+		for (i = 0; str[i]; i++)
+			p[i] = str[i];
+		p[i] = 0;
+	}
+	return (p);
+}
+/**
+ *new_dog - dog
+ *@name: dog
+ *@age: dog
+ *@owner: dog
+ *Return: dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int n, o, i;
-	dog_t *d1;
+	dog_t *p = NULL;
+	char *cp_name;
+	char *cp_owner;
 
-	d1 = (dog_t *)malloc(sizeof(dog_t));
-	if (d1 == NULL)
+	p = malloc(sizeof(struct dog));
+	if (!p)
+		return (NULL);
+	cp_name = str_cpy(name);
+	if (!cp_name)
 	{
+		free(p);
 		return (NULL);
 	}
-	n = o = 0;
-	while (name[n++])
-		;
-	while (owner[o++])
-		;
-	d1->name = malloc(n * sizeof(d1->name));
-	if (d1->name == NULL)
+	cp_owner = str_cpy(owner);
+	if (!cp_owner)
 	{
-		free(d1);
+		free(p);
+		free(cp_name);
 		return (NULL);
 	}
-	i = 0;
-	while (i <= n)
-	{
-		i++;
-		d1->name[i] = name[i];
-	}
-	d1->age = age;
-	d1->owner = malloc(o * sizeof(d1->owner));
-	if (d1->owner)
-	{
-		free(d1->name);
-		free(d1);
-		return (NULL);
-	}
-	i = 0;
-	while (i <= o)
-	{
-		i++;
-		d1->owner[i] = owner[i];
-	}
-	return (d1);
+	p->name = cp_name;
+	p->age = age;
+	p->owner = cp_owner;
+	return (p);
 }
