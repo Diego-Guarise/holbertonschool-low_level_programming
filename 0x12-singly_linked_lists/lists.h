@@ -1,7 +1,7 @@
 #ifndef holberton
 #define holberton
 #include <stdio.h>
-#include <stlib.h>
+#include <stdlib.h>
 #include <stdarg.h>
 /**
    * struct list_s - singly linked list
