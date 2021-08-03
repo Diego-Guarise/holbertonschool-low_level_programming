@@ -1,5 +1,6 @@
 #ifndef holberton
 #define holberton
+#include <string.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
