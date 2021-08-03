@@ -26,9 +26,5 @@ size_t print_listint(const listint_t *h)
 			contador++;
 		}
 	}
-	else
-	{
-		return (-1);
-	}
-return (contador);
+	return (contador);
 }
