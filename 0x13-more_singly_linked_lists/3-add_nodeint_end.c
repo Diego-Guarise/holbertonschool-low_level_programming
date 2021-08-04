@@ -3,7 +3,7 @@
 /**
   * listint_t *add_nodeint_end - adds a new node at the end
   * @n: lalal
-  * @h: alala
+  * @head: lalalal
   * Return: the address of the new element
  */
 
@@ -12,18 +12,21 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	listint_t *ptr = NULL;
 	listint_t *end;
 	int i;
+
 	ptr = malloc(sizeof(listint_t));
-	if (ptr && *head)
+	if (ptr)
 	{
 		ptr->n = n;
 		ptr->next = NULL;
-		end = *head;
-		while (end->next)
-			end = end->next;
-		end->next = ptr;
-		return (ptr);
+		if (*head)
+		{
+			end = *head;
+			while (end->next)
+				end = end->next;
+			end->next = ptr;
+		}
+		else
+			*head = ptr;
 	}
-	for (i = 0; i != '\0'; i++)
-		printf("%d\n", n);
-	return (NULL);
+	return (ptr);
 }
