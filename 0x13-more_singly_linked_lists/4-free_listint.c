@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * void free_listint - function that frees a listint_t list.
+ * free_listint - function that frees a listint_t list.
  * @head: el head
  */
 
