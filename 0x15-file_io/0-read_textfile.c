@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * ssize_t read_textfile - reads a text file and prints it to the POSIX standard output
+ * read_textfile - reads a text file and prints it to the POSIX standard output
  * @filename: file
  * @letters: letters
  * Return: c, write. or 0 if it error
