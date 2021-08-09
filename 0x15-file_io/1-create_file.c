@@ -9,9 +9,7 @@ int create_file(const char *filename, char *text_content)
 {
 	ssize_t o, w, i;
 
-	if (!filename)
-		return (-1);
-	if (!text_content)
+	if (!filename | !text_content)
 		return (-1);
 	for (i = 0; text_content[i] != '\0'; i++)
 	o = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
@@ -23,10 +21,8 @@ int create_file(const char *filename, char *text_content)
 		if (w == -1)
 			return (-1);
 	}
+	close(o);
 	if (w != i)
-	{
 		return (-1);
-	}
-	close(w);
 	return (1);
 }
