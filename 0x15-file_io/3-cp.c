@@ -9,7 +9,4 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc)
-		if (argv)
-			return (1);
 }
