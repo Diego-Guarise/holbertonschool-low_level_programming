@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
 /**
  * print_dlistint - print elements
  * @h: lista
