@@ -23,7 +23,10 @@ new->n = n;
 while (run)
 {
 if (idx == 0)
+{
+free(new);
 return (add_dnodeint(h, n));
+}
 if (idx == i)
 {
 new->next = run;
@@ -38,6 +41,9 @@ run = run->next;
 if (idx > i)
 return (NULL);
 if (idx == i)
+{
+free(new);
 return (add_dnodeint_end(h, n));
+}
 return (NULL);
 }
