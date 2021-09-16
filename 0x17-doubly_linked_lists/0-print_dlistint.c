@@ -7,15 +7,15 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-    const dlistint_t *run;
-    int nodes = 0;
+const dlistint_t *run;
+int nodes = 0;
 
-    run = h;
-    while(run)
-    {
-        printf("%d\n", run->n);
-        run = run->next;
-        nodes++;
-    }
-    return(nodes);
+run = h;
+while (run)
+{
+printf("%d\n", run->n);
+run = run->next;
+nodes++;
+}
+return (nodes);
 }
