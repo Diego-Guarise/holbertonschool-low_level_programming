@@ -25,5 +25,6 @@ if (*head)
 {
 (*head)->prev = newNode;
 }
+*head = newNode;
 return (newNode);
 }
