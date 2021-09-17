@@ -23,7 +23,6 @@ run->next->prev = run->prev;
 if (*head && index == 0)
 {
 *head = run->next;
-run->next = NULL;
 }
 run->prev = NULL;
 run->next = NULL;
