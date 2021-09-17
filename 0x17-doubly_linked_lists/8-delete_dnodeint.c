@@ -16,11 +16,14 @@ while (run != NULL)
 {
 if (index == i)
 {
-(run->prev != NULL) ? run->prev->next = run->next : NULL;
-(run->next != NULL) ? run->next->prev = run->prev : NULL;
+if (run->prev != NULL)
+run->prev->next = run->next;
+if (run->next != NULL)
+run->next->prev = run->prev;
 if (*head && index == 0)
 {
 *head = run->next;
+run->next = NULL;
 }
 run->prev = NULL;
 run->next = NULL;
@@ -30,5 +33,5 @@ return (1);
 run = run->next;
 i++;
 }
-return (1);
+return (-1);
 }
