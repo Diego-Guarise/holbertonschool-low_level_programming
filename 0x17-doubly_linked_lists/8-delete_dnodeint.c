@@ -2,7 +2,7 @@
 /**
  * delete_dnodeint_at_index - add node at the end of lists
  * @head: lists
- * @idx: int
+ * @index: int
  * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
@@ -12,7 +12,7 @@ unsigned int i = 0;
 if (*head == NULL)
 return (-1);
 
-while (run != NULL )
+while (run != NULL)
 {
 if (index == i)
 {
