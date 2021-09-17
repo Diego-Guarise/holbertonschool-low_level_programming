@@ -16,7 +16,8 @@ if (!index)
 *head = run->next;
 run->prev = NULL;
 run->next = NULL;
-return (1);}
+return (1);
+}
 while (run != NULL)
 {
 if (index == i)
