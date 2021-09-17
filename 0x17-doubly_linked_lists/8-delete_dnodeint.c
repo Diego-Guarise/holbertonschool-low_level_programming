@@ -12,30 +12,23 @@ unsigned int i = 0;
 if (*head == NULL)
 return (-1);
 
-if (index == 0)
-{
-if (*head)
-{
-*head = run->next;
-run->next->prev = NULL;
-run->next = NULL;
-return (1);
-}
-else
-return (-1);
-}
-while (run->next != NULL)
+while (run != NULL )
 {
 if (index == i)
 {
-run->next->prev = run->next->prev->prev;
-run->prev->next = run->prev->next->next;
+(run->prev != NULL) ? run->prev->next = run->next : NULL;
+(run->next != NULL) ? run->next->prev = run->prev : NULL;
+if (*head && index == 0)
+{
+*head = run->next;
+}
 run->prev = NULL;
 run->next = NULL;
+/*if(run->next && run->prev){free(run); }*/
 return (1);
 }
 run = run->next;
 i++;
 }
-return (-1);
+return (1);
 }

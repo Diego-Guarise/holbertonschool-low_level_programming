@@ -1,2 +1,3 @@
-#!/bin/bash
-echo 906609 >> 102-result
+c = malloc(6)
+c = 906609
+echo c >> 102-result
