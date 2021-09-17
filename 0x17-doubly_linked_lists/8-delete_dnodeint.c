@@ -11,7 +11,12 @@ dlistint_t *run = *head;
 unsigned int i = 0;
 if (*head == NULL)
 return (-1);
-
+if (!index)
+{
+*head = run->next;
+run->prev = NULL;
+run->next = NULL;
+return (1);}
 while (run != NULL)
 {
 if (index == i)
@@ -21,9 +26,7 @@ run->prev->next = run->next;
 if (run->next != NULL)
 run->next->prev = run->prev;
 if (*head && index == 0)
-{
 *head = run->next;
-}
 run->prev = NULL;
 run->next = NULL;
 return (1);
