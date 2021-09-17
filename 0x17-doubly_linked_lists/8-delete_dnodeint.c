@@ -26,7 +26,6 @@ if (*head && index == 0)
 }
 run->prev = NULL;
 run->next = NULL;
-/*if(run->next && run->prev){free(run); }*/
 return (1);
 }
 run = run->next;
