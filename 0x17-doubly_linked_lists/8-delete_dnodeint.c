@@ -9,24 +9,28 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 dlistint_t *run = *head;
 unsigned int i = 0;
-if (*head == NULL)
+
+if (!head || *head == NULL)
 return (-1);
-while (run != NULL)
+if (!index)
 {
-if (index == i)
+*head = run->next;
+if (run->next)
+run->next->prev = NULL;
+free(run);
+return (1);
+}
+while (index > i)
 {
+run = run->next;
+if(!run)
+return (-1);
+index--;
+}
 if (run->prev != NULL)
 run->prev->next = run->next;
 if (run->next != NULL)
 run->next->prev = run->prev;
-if (*head && index == 0)
-*head = run->next;
-run->prev = NULL;
-run->next = NULL;
+free(run);
 return (1);
-}
-run = run->next;
-i++;
-}
-return (-1);
 }
