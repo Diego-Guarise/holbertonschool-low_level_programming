@@ -23,7 +23,7 @@ return (1);
 while (index > i)
 {
 run = run->next;
-if(!run)
+if (!run)
 return (-1);
 index--;
 }
