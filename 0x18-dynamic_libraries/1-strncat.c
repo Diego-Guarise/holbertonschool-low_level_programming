@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strncat - function is similar to the _strcat
  * @dest: char pointer
