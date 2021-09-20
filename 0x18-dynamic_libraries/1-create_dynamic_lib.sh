@@ -1,5 +1,8 @@
 #!/bin/bash
-gcc *.c -c -fPIC
+gcc -c -fPIC *.c
 gcc *.o -shared -o liball.so
-gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -ldynamic -o len
+gcc -Wall -pedantic -Werror -Wextra -L. -ldynamic -o len
+ldd len 
 export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+ldd len
+./len
