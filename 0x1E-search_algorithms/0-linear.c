@@ -10,17 +10,16 @@
 
 int linear_search(int *array, size_t size, int value)
 {
-	size_t number = 0;
+	size_t number;
 
 	if (!array)
 		return (-1);
 
-	while (size--)
+	for (number = 0; number < size; number++)
 	{
 		printf("number that we have found[%ld] = [%d]\n", number, array[number]);
 		if (value == array[number])
 			return (number);
-		number++;
 	}
 	return (-1);
 }
